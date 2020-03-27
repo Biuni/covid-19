@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "COVID-19",
+  "name": "List of all dashboard and data sources of COVID-19",
   "icons": [
     {
       "src": "favicon.ico",

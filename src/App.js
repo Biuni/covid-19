@@ -22,7 +22,7 @@ function App() {
         'https://gist.githubusercontent.com/Biuni/d4be934f7e09037764411b2a6b4d85d3/raw/e250718fc74ea1ff953f7045328cb8748cbeb5d2/COVID-19.json',
       );
       setData(result.data);
-      await new Promise(r => setTimeout(r, 5000));
+      await new Promise(r => setTimeout(r, 1000));
       setIsLoading(false);
     };
     fetchData();
