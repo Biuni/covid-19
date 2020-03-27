@@ -1,44 +1,47 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import logo from './virus.svg';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import Category from './components/Category';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Loader from './components/Loader';
+import Filter from './components/Filter';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-// TEST ---------------------------
-import ApiResult from './List.test'
-// --------------------------------
-
 function App() {
 
-  const printCategory = ApiResult.map(res => (
-    <Category name={res.category} link={res.name} list={res.list} />
-  ))
+  const [data, setData] = useState({ hits: [] });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const printFilter = ApiResult.map(res => (
-    <li><a href={`#${res.name}`}>{res.category}</a></li>
-  ))
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      const result = await axios(
+        'https://gist.githubusercontent.com/Biuni/d4be934f7e09037764411b2a6b4d85d3/raw/e250718fc74ea1ff953f7045328cb8748cbeb5d2/COVID-19.json',
+      );
+      setData(result.data);
+      await new Promise(r => setTimeout(r, 5000));
+      setIsLoading(false);
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="container my-3 App">
-      <header>
-        <img src={logo} alt="COVID-19" className="AppLogo" />
-        <h1 className="AppTitle">COVID-19 <small>Dashboard and Resources</small></h1>
-      </header>
-
-      <nav>
-        <ul className="AppFilter list-unstyled">
-          {printFilter}
-        </ul>
-      </nav>
-
-      {printCategory}
-
-      <footer>
-        Created with <FontAwesomeIcon icon={faHeart} color="#eb5569" /> by <a href="https://biuni.it">Biuni</a><br/>
-        <small>Virus icon by <a href="https://www.flaticon.com/">Flaticon</a></small>
-      </footer>
+      <Header />
+      {isLoading ? (
+        <Loader />
+      ) : (
+      <>
+        <Filter category={data.hits} />
+        {data.hits.map((res, index) => (
+          <Category name={res.category} link={res.name} list={res.list} key={index} />
+        ))}
+      </>
+      )}
+      <Footer />
     </div>
   );
 }

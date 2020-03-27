@@ -30,6 +30,11 @@ header {
   font-size: 14px;
   font-weight: 300;
 }
+.AppLoader {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 2.5;
+}
 .AppFilter {
   margin-top: 25px;
   text-align: center;
