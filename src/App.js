@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import axios from 'axios';
 
 import Category from './components/Category';
@@ -10,6 +11,9 @@ import Filter from './components/Filter';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
+ReactGA.initialize('UA-58722026-9');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 function App() {
 
   const [data, setData] = useState({ hits: [] });
@@ -19,7 +23,7 @@ function App() {
     const fetchData = async () => {
       setIsLoading(true);
       const result = await axios(
-        'https://gist.githubusercontent.com/Biuni/d4be934f7e09037764411b2a6b4d85d3/raw/e250718fc74ea1ff953f7045328cb8748cbeb5d2/COVID-19.json',
+        'http://biuni.it/api/covid-19.json',
       );
       setData(result.data);
       await new Promise(r => setTimeout(r, 1000));
