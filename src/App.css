@@ -51,12 +51,34 @@ header {
   margin-top: 40px;
 }
 .CategoryName {
-  margin-left: -15px;
   font-weight: 700;
   font-size: 18px;
   color: #eb5569;
 }
-
+.AppCard {
+  margin-top: 15px;
+}
+.AppCard .card-body {
+  padding-bottom: 10px;
+}
+.AppCard .card-subtitle {
+  font-size: 13px;
+}
+.AppCard .card-text {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.AppCard .card-link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.AppCard .card-footer {
+  font-size: 13px;
+  font-weight: 300;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
 footer {
   font-size: 13px;
   font-weight: 300;
@@ -73,13 +95,6 @@ footer {
   .AppTitle {
     display: block;
     padding: 10px;
-  }
-  .CategoryName {
-    margin-left: 0px;
-  }
-  .Category .row {
-    margin-left: 0px;
-    margin-right: 0px;
   }
 }
  

@@ -6,36 +6,9 @@ import Category from './components/Category';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
-const ApiResult = [
-  {
-    category: "Dashboard",
-    name: "dashboard",
-    list: [
-      {
-        title: "COVID-19 Comparator",
-        description: "Coronavirus cases comparator by countries, from chosen date and number of days (PWA)",
-        country: "Global",
-        countryCode: "it",
-        link: "https://covid-comparator.netlify.com/",
-        time: "27th March 2020"
-      }
-    ]
-  },
-  {
-    category: "Data Sources",
-    name: "data",
-    list: [
-      {
-        title: "COVID-19 Comparator",
-        description: "Coronavirus cases comparator by countries, from chosen date and number of days (PWA)",
-        country: "Global",
-        countryCode: "it",
-        link: "https://covid-comparator.netlify.com/",
-        time: "27th March 2020"
-      }
-    ]
-  }
-];
+// TEST ---------------------------
+import ApiResult from './List.test'
+// --------------------------------
 
 function App() {
 
@@ -50,15 +23,21 @@ function App() {
   return (
     <div className="container my-3 App">
       <header>
-        <img src={logo} className="AppLogo" />
+        <img src={logo} alt="COVID-19" className="AppLogo" />
         <h1 className="AppTitle">COVID-19 <small>Dashboard and Resources</small></h1>
       </header>
+
       <nav>
-      <ul className="AppFilter list-unstyled">{printFilter}</ul>
+        <ul className="AppFilter list-unstyled">
+          {printFilter}
+        </ul>
       </nav>
+
       {printCategory}
+
       <footer>
-        With <FontAwesomeIcon icon={faHeart} color="red" /> by <a href="https://biuni.it">Biuni</a> <br /> Virus icon by <a href="https://www.flaticon.com/">Flaticon</a>
+        Created with <FontAwesomeIcon icon={faHeart} color="#eb5569" /> by <a href="https://biuni.it">Biuni</a><br/>
+        <small>Virus icon by <a href="https://www.flaticon.com/">Flaticon</a></small>
       </footer>
     </div>
   );
