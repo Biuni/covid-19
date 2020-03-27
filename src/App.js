@@ -23,7 +23,7 @@ function App() {
     const fetchData = async () => {
       setIsLoading(true);
       const result = await axios(
-        'https://biuni.it/api/covid-19.json',
+        'https://www.biuni.it/api/',
       );
       setData(result.data);
       await new Promise(r => setTimeout(r, 1000));
