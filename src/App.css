@@ -3,44 +3,97 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #004d40;
 }
 
-/* ----- */
-.App {
+/* ----------------------- */
+/* --------- App --------- */
+/* ----------------------- */
+
+header {
+  padding-top: 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.AppLogo {
+  display: inline-block;
+  max-width: 120px;
+}
+.AppTitle {
+  padding: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 40px;
+}
+.AppTitle small {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+}
+.AppFilter {
+  margin-top: 25px;
+  text-align: center;
+}
+.AppFilter li {
+  font-size: 12px;
+  display: inline;
+  margin: 5px;
+  padding: 5px 15px;
+  background: #1d1d1d;
+  border-radius: 20px;
+  background: #e0f2f1;
+}
+.AppFilter li a {
+  color: #00796b;
+  text-decoration: none;
+}
+.Category {
+  margin-top: 40px;
+}
+.CategoryName {
+  margin-left: -15px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #eb5569;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+footer {
+  font-size: 13px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ----------------------- */
+/* ------- Mobile -------- */
+/* ----------------------- */
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .AppTitle {
+    display: block;
+    padding: 10px;
+  }
+  .CategoryName {
+    margin-left: 0px;
+  }
+  .Category .row {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {  
+ 
 }
-
-.App-link {
-  color: #61dafb;
+ 
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+ 
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {  
+    
 }
