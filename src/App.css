@@ -76,6 +76,7 @@ header {
 .CategoryName {
   font-weight: 700;
   font-size: 18px;
+  display: inline-block;
   color: #eb5569;
 }
 .AppCard {

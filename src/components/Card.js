@@ -6,7 +6,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 class Card extends Component {
   render() {
     return (
-      <div className="col-md-3">
+      <div className="col-lg-3 col-md-4 col-sm-6">
         <div className="card AppCard">
           <div className="card-body">
             <h5 className="card-title">{this.props.title}</h5>
