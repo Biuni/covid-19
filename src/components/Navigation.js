@@ -21,7 +21,9 @@ class Navigation extends Component {
             <li key={index}><a href={`#${res.name}`}>{res.category}</a></li>
           ))}
           <li className="AddResource">
-            <a href="/"><FontAwesomeIcon icon={faPlusCircle} color="#eb5569" />&nbsp;Add resource</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScF-NDNNkGUlySFcQQZQk1df_Wu3iOkto4TLJlpkwpdme7wPg/viewform?usp=sf_link">
+              <FontAwesomeIcon icon={faPlusCircle} color="#eb5569" />&nbsp;Add resource
+            </a>
           </li>
         </ul>
         <ul className="AppShare list-unstyled">
