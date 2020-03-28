@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import FilterCountry from './FilterCountry'
 
 class Category extends Component {
   render() {
     return (
       <div className="Category">
         <h4 className="CategoryName" id={this.props.link}>{this.props.name}</h4>
+        <FilterCountry />
         <div className="row">
           {this.props.list.map((res, index) => (
             <Card

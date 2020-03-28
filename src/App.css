@@ -44,13 +44,31 @@ header {
   display: inline;
   margin: 5px;
   padding: 5px 15px;
-  background: #1d1d1d;
   border-radius: 20px;
   background: #e0f2f1;
 }
 .AppFilter li a {
   color: #00796b;
   text-decoration: none;
+}
+.AppFilter .AddResource {
+  color: #eb5569;
+  background: #ffcdd2;
+  display: block;
+  margin: 10px auto 0 auto;
+  max-width: 165px;
+}
+.AppFilter .AddResource a {
+  color: #eb5569;
+  text-decoration: none;
+}
+.AppShare {
+  margin-top: 25px;
+  text-align: center;
+}
+.AppShare li {
+  display: inline;
+  margin: 2px;
 }
 .Category {
   margin-top: 40px;

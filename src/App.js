@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 import axios from 'axios';
 
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import Loader from './components/Loader';
 import Category from './components/Category';
 import Footer from './components/Footer';
-import Header from './components/Header';
-import Loader from './components/Loader';
-import Filter from './components/Filter';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
@@ -39,7 +39,7 @@ function App() {
         <Loader />
       ) : (
       <>
-        <Filter category={data.hits} />
+        <Navigation category={data.hits} />
         {data.hits.map((res, index) => (
           <Category name={res.category} link={res.name} list={res.list} key={index} />
         ))}
