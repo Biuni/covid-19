@@ -9,12 +9,14 @@ class Category extends Component {
         <div className="row">
           {this.props.list.map((res, index) => (
             <Card
+              id={res.id}
               title={res.title}
               description={res.description}
               country={res.country}
               countryCode={res.countryCode}
               link={res.link}
               time={res.time}
+              counter={res.counter}
               key={index} />
           ))}
         </div>

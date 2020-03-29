@@ -117,6 +117,10 @@ header {
   font-size: 13px;
   padding: 5px;
 }
+.AppCard .CardVoting:disabled {
+  color: #00796b;
+  background: #e0f2f1;
+}
 .AppCard .card-footer {
   font-size: 13px;
   font-weight: 300;

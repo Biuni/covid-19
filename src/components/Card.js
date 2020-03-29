@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import FlagIcon from './FlagIcon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleRight, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import LikeButton from './LikeButton'
 
 class Card extends Component {
   render() {
@@ -19,8 +20,10 @@ class Card extends Component {
               &nbsp;{this.props.country}
             </h6>
             <p className="card-text">{this.props.description}</p>
-            <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="card-link">View <FontAwesomeIcon icon={faAngleDoubleRight} color="#4fc3f7" size="sm" /></a>
-            {/*<button className="CardVoting"><FontAwesomeIcon icon={faThumbsUp} color="#eb5569" size="sm" /> 0</button>*/}
+            <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="card-link">
+              View <FontAwesomeIcon icon={faAngleDoubleRight} color="#4fc3f7" size="sm" />
+            </a>
+            <LikeButton like={this.props.counter} id={this.props.id} />
           </div>
           <div className="card-footer">
             <small className="text-muted">Added on: <strong>{this.props.time}</strong></small>
