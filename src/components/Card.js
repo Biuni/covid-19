@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FlagIcon from './FlagIcon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleRight, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 class Card extends Component {
   render() {
@@ -11,7 +11,7 @@ class Card extends Component {
           <div className="card-body">
             <h5 className="card-title">{this.props.title}</h5>
             <h6 className="card-subtitle mb-2 text-muted">
-              {this.props.countryCode === "" ? (
+              {this.props.countryCode === "zz" ? (
                 <span role="img" aria-label="World">🌍</span>
               ) : (
                 <FlagIcon code={this.props.countryCode} />
@@ -19,7 +19,8 @@ class Card extends Component {
               &nbsp;{this.props.country}
             </h6>
             <p className="card-text">{this.props.description}</p>
-            <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="card-link">View <FontAwesomeIcon icon={faExternalLinkAlt} color="#eb5569" size="sm" /></a>
+            <a href={this.props.link} target="_blank" rel="noopener noreferrer" className="card-link">View <FontAwesomeIcon icon={faAngleDoubleRight} color="#4fc3f7" size="sm" /></a>
+            {/*<button className="CardVoting"><FontAwesomeIcon icon={faThumbsUp} color="#eb5569" size="sm" /> 0</button>*/}
           </div>
           <div className="card-footer">
             <small className="text-muted">Added on: <strong>{this.props.time}</strong></small>

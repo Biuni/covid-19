@@ -1,7 +1,7 @@
 const countries = [
   {
     label: '🌍 Global',
-    value: '',
+    value: 'zz',
   },
   {
     label: '🇦🇫 Afghanistan',

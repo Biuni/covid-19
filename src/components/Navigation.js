@@ -24,7 +24,7 @@ class Navigation extends Component {
             </li>
           ))}
           <li className="AddResource">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScF-NDNNkGUlySFcQQZQk1df_Wu3iOkto4TLJlpkwpdme7wPg/viewform?usp=sf_link">
+            <a href="http://api.covid-19-coronavirus.tools/">
               <FontAwesomeIcon icon={faPlusCircle} color="#eb5569" />&nbsp;Add resource
             </a>
           </li>

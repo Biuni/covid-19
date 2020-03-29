@@ -24,19 +24,18 @@ function App() {
     fetchData();
   }, []);
 
-  const fetchData = async (country) => {
+  const fetchData = async (cc) => {
     setIsLoading(true);
     const result = await axios(
-      'https://www.biuni.it/api/',
+      `https://api.covid-19-coronavirus.tools/get/?country=${(cc === undefined) ? '' : cc}`,
     );
-    // `http://api.covid-19-coronavirus.tools/get/?country=${country}`
     setData(result.data);
     await new Promise(r => setTimeout(r, 1000));
     setIsLoading(false);
   };
 
-  const FilterByCountry = (country) => {
-    fetchData(country);
+  const FilterByCountry = (cc) => {
+    fetchData(cc);
   }
 
   return (
@@ -48,6 +47,11 @@ function App() {
       <>
         <Navigation category={data.hits} />
         <FilterCountry filter={FilterByCountry} />
+        {(data.hits.length === 0) ? (
+          <div className="d-block text-center my-5 pt-5">
+            No resources for this country!
+          </div>
+        ) : ''}
         {data.hits.map((res, index) => (
           <Category name={res.category} link={res.name} list={res.list} key={index} />
         ))}

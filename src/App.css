@@ -98,6 +98,24 @@ header {
 .AppCard .card-link {
   padding-top: 8px;
   padding-bottom: 8px;
+  color: #4fc3f7;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.AppCard .CardVoting {
+  float: right;
+  text-transform: none;
+  line-height: 1.15;
+  margin: 0;
+  overflow: hidden;
+  -webkit-appearance: button;
+  border-radius: 5px;
+  border: 0px;
+  outline: none;
+  color: #eb5569;
+  background: #ffcdd2;
+  font-size: 13px;
+  padding: 5px;
 }
 .AppCard .card-footer {
   font-size: 13px;
