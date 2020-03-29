@@ -10,7 +10,7 @@ const customStyles = {
   control: (provided, state) => ({
     ...provided,
     width: '100%',
-    maxWidth: 400,
+    maxWidth: 450,
     fontSize: '13px',
     fontWeight: 300,
     border: '1px solid rgba(0, 0, 0, 0.125)'
@@ -30,7 +30,7 @@ class FilterCountry extends Component {
   };
   handleChange = selectedOption => {
     this.setState({ selectedOption });
-    alert(selectedOption.value)
+    this.props.filter(selectedOption.value)
   };
   render() {
     const { selectedOption } = this.state;

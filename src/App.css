@@ -50,6 +50,7 @@ header {
 .AppFilter li a {
   color: #00796b;
   text-decoration: none;
+  cursor: pointer;
 }
 .AppFilter .AddResource {
   color: #eb5569;
@@ -71,13 +72,14 @@ header {
   margin: 2px;
 }
 .Category {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .CategoryName {
   font-weight: 700;
   font-size: 18px;
   display: inline-block;
   color: #eb5569;
+  padding-top: 20px;
 }
 .AppCard {
   margin-top: 15px;

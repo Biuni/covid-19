@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -18,7 +19,9 @@ class Navigation extends Component {
       <nav>
         <ul className="AppFilter list-unstyled">
           {this.props.category.map((res, index) => (
-            <li key={index}><a href={`#${res.name}`}>{res.category}</a></li>
+            <li key={index}>
+              <Link to={res.name} spy={true} smooth={true} duration={500}>{res.category}</Link>
+            </li>
           ))}
           <li className="AddResource">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScF-NDNNkGUlySFcQQZQk1df_Wu3iOkto4TLJlpkwpdme7wPg/viewform?usp=sf_link">
