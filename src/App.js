@@ -36,7 +36,7 @@ function App() {
 
   const FilterByCountry = (cc) => {
     fetchData(cc);
-  }
+  };
 
   return (
     <div className="container my-3 App">

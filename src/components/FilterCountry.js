@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Select from 'react-select';
 import options from './../utils/CountryList';
 
@@ -24,27 +24,22 @@ const customStyles = {
   }),
 }
 
-class FilterCountry extends Component {
-  state = {
-    selectedOption: null,
-  };
-  handleChange = selectedOption => {
-    this.setState({ selectedOption });
-    this.props.filter(selectedOption.value)
-  };
-  render() {
-    const { selectedOption } = this.state;
+function FilterCountry(props) {
+  const { selected } = { selectedOption: null };
 
-    return (
-      <Select
-        value={selectedOption}
-        onChange={this.handleChange}
-        options={options}
-        placeholder="Filter by country..."
-        styles={customStyles}
-      />
-    );
-  }
+  const handleChange = (countryCode) => {
+    props.filter(countryCode.value)
+  };
+
+  return (
+    <Select
+      value={selected}
+      onChange={handleChange}
+      options={options}
+      placeholder="Filter by country..."
+      styles={customStyles}
+    />
+  );
 }
 
 export default FilterCountry;

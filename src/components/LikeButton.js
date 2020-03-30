@@ -1,41 +1,37 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
-class LikeButton extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      like: this.props.like,
-      disabled: false
-    }
-    this.handleLike = this.handleLike.bind(this)
-  }
+function LikeButton(props) {
 
-  handleLike() {
-    fetch(`https://api.covid-19-coronavirus.tools/like/`, {
+  const [data, setData] = useState({
+    like: props.like,
+    disabled: false
+  });
+
+  const handleLike = () => {
+    axios({
       method: 'POST',
-      body: JSON.stringify({
-        id: this.props.id,
-        like: this.state.like,
-      }),
+      url: `https://api.covid-19-coronavirus.tools/like/`,
+      data: {
+        id: props.id,
+        like: data.like,
+      },
       headers: { 'Content-type': 'application/json; charset=UTF-8' },
     })
-    .then(response => response.json())
-    .then(res => this.setState({
-      like: res.like,
+    .then(res => setData({
+      like: res.data.like,
       disabled: true
     }))
     .catch(err => console.log(err))
-  }
+  };
 
-  render() {
-    return (
-      <button className="CardVoting" onClick={this.handleLike} onKeyPress={this.handleLike} disabled={this.state.disabled}>
-        <FontAwesomeIcon icon={faThumbsUp} size="sm" /> {this.state.like}
-      </button>
-    )
-  }
+  return (
+    <button className="CardVoting" onClick={handleLike} onKeyPress={handleLike} disabled={data.disabled}>
+      <FontAwesomeIcon icon={faThumbsUp} size="sm" /> {data.like}
+    </button>
+  );
 }
 
 export default LikeButton;
