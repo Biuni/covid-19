@@ -127,6 +127,10 @@ header {
   padding-top: 8px;
   padding-bottom: 8px;
 }
+.AppDonation {
+  width: 120px !important;
+  border-radius: 10px;
+}
 footer {
   font-size: 13px;
   font-weight: 300;
