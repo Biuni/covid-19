@@ -19,7 +19,7 @@ function Navigation(props) {
           </li>
         ))}
         <li className="AddResource">
-          <a href="http://api.covid-19-coronavirus.tools/">
+          <a href="https://api.covid-19-coronavirus.tools/">
             <FontAwesomeIcon icon={faPlusCircle} color="#eb5569" />&nbsp;Add resource
           </a>
         </li>

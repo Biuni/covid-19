@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 import axios from 'axios';
-import https from 'https';
 
 import Header from './components/Header';
 import Navigation from './components/Navigation';
@@ -16,10 +15,6 @@ import './App.css';
 ReactGA.initialize('UA-58722026-9');
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-const agent = new https.Agent({
-  rejectUnauthorized: false
-});
-
 function App() {
 
   const [data, setData] = useState({ hits: [] });
@@ -33,7 +28,6 @@ function App() {
     setIsLoading(true);
     const result = await axios(
       `https://api.covid-19-coronavirus.tools/get/?country=${(cc === undefined) ? '' : cc}`,
-      { httpsAgent: agent }
     );
     setData(result.data);
     await new Promise(r => setTimeout(r, 1000));
