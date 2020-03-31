@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
+import https from 'https';
+
+const agent = new https.Agent({
+  rejectUnauthorized: false
+});
 
 function LikeButton(props) {
 
@@ -19,6 +24,7 @@ function LikeButton(props) {
         like: data.like,
       },
       headers: { 'Content-type': 'application/json; charset=UTF-8' },
+      httpsAgent: agent
     })
     .then(res => setData({
       like: res.data.like,
