@@ -27,7 +27,7 @@ function App() {
   const fetchData = async (cc) => {
     setIsLoading(true);
     const result = await axios(
-      `https://api.covid-19-coronavirus.tools/get/?country=${(cc === undefined) ? '' : cc}`,
+      `https://covid-19-coronavirus.000webhostapp.com/get/?country=${(cc === undefined) ? '' : cc}`,
     );
     setData(result.data);
     await new Promise(r => setTimeout(r, 1000));

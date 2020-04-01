@@ -13,7 +13,7 @@ function LikeButton(props) {
   const handleLike = () => {
     axios({
       method: 'POST',
-      url: `https://api.covid-19-coronavirus.tools/like/`,
+      url: `https://covid-19-coronavirus.000webhostapp.com/like/`,
       data: {
         id: props.id,
         like: data.like,
