@@ -10,7 +10,7 @@ Features included:
 - Recommend or add new resources
 
 ## Add resource
-Visiting http://api.covid-19-coronavirus.tools/ you can fill the form and add your dashboard or data to the list.
+Visiting https://api.covid-19-coronavirus.tools/ you can fill the form and add your dashboard or data to the list.
 
 *INFO: The resource must be validated before going online, for this reason it will not be immediately available once sent.*
 
