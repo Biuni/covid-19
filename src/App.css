@@ -15,6 +15,10 @@ header {
   padding-top: 20px;
   text-align: center;
 }
+header a {
+  color: inherit !important;
+  display: inline-block;
+}
 .AppLogo {
   display: inline-block;
   max-width: 120px;
@@ -80,6 +84,22 @@ header {
   display: inline-block;
   color: #eb5569;
   padding-top: 20px;
+}
+.AppRemoveFilter {
+  font-size: 12px;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: #e0f2f1;
+  color: #00796b;
+  text-decoration: none;
+  cursor: pointer;
+  outline: hidden;
+  border: 0;
+}
+.AppRemoveFilter:focus {
+  outline: none;
 }
 .AppCard {
   margin-top: 15px;

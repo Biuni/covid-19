@@ -17,4 +17,4 @@ Visiting https://api.covid-19-coronavirus.tools/ you can fill the form and add y
 ## Donation
 The project is free from advertise so, if you want to support it buy me a coffee:
 
-![BuyMeACoffee](https://i.ibb.co/gynFwS1/rsz-default-orange.png "Make a donation")
+[![BuyMeACoffee](https://i.ibb.co/gynFwS1/rsz-default-orange.png "Make a donation")](https://www.buymeacoffee.com/Biuni)

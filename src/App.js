@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import Loader from './components/Loader';
 import FilterCountry from './components/FilterCountry';
+import PlaceHolderFilter from './components/PlaceHolderFilter';
 import Category from './components/Category';
 import Footer from './components/Footer';
 
@@ -48,9 +49,7 @@ function App() {
         <Navigation category={data.hits} />
         <FilterCountry filter={FilterByCountry} />
         {(data.hits.length === 0) ? (
-          <div className="d-block text-center my-5 pt-5">
-            No resources for this country!
-          </div>
+          <PlaceHolderFilter clear={FilterByCountry} />
         ) : ''}
         {data.hits.map((res, index) => (
           <Category name={res.category} link={res.name} list={res.list} key={index} />
