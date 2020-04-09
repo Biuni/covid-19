@@ -5,7 +5,7 @@ function Category(props) {
   return (
     <div className="Category">
       <h4 className="CategoryName" id={props.link}>{props.name}</h4>
-      <div className="row">
+      <div className="card-columns">
         {props.list.map((res, index) => (
           <Card
             id={res.id}

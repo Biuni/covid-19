@@ -13,7 +13,7 @@ function Footer() {
           <img className="AppDonation" src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" />
         </a>
       </div>
-      <ScrollUpButton style={{ background: '#e0f2f1', fill: '#00796b', borderRadius: '5px' }} />
+      <ScrollUpButton ContainerClassName="AppScrollUp" style={{ background: '#e0f2f1', fill: '#00796b', borderRadius: '5px' }} />
     </footer>
   );
 }

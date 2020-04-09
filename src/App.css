@@ -101,9 +101,6 @@ header a {
 .AppRemoveFilter:focus {
   outline: none;
 }
-.AppCard {
-  margin-top: 15px;
-}
 .AppCard .card-body {
   padding-bottom: 10px;
 }
@@ -161,26 +158,47 @@ footer {
 /* ----------------------- */
 /* ------- Mobile -------- */
 /* ----------------------- */
- 
-/* Small devices (landscape phones, 576px and up) */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card-columns {
+    -webkit-column-count: 4 !important;
+    -moz-column-count: 4 !important;
+    column-count: 4 !important;
+  }  
+}
+/* Extra large devices (large desktops, 1200px and down) */
+@media (max-width: 1200px) {
+  .card-columns {
+    -webkit-column-count: 3 !important;
+    -moz-column-count: 3 !important;
+    column-count: 3 !important;
+  }  
+}
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+
+}
+/* Medium devices (tablets, 768px and down) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {
+  .card-columns {
+    -webkit-column-count: 2 !important;
+    -moz-column-count: 2 !important;
+    column-count: 2 !important;
+  }
+  .AppScrollUp {
+    display: none;
+  }
+}
+/* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {
   .AppTitle {
     display: block;
     padding: 10px;
   }
-}
- 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (max-width: 768px) {  
- 
-}
- 
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 992px) { 
- 
-}
- 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) {  
-    
+  .card-columns {
+    -webkit-column-count: 1 !important;
+    -moz-column-count: 1 !important;
+    column-count: 1 !important;
+  }
 }

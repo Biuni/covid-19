@@ -31,7 +31,6 @@ function App() {
       `https://api.covid-19-coronavirus.tools/get/?country=${(cc === undefined) ? '' : cc}`,
     );
     setData(result.data);
-    await new Promise(r => setTimeout(r, 1000));
     setIsLoading(false);
   };
 

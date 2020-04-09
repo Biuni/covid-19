@@ -6,7 +6,6 @@ import LikeButton from './LikeButton'
 
 function Card(props) {
   return (
-    <div className="col-lg-3 col-md-4 col-sm-6">
       <div className="card AppCard">
         <div className="card-body">
           <h5 className="card-title">{props.title}</h5>
@@ -28,7 +27,6 @@ function Card(props) {
           <small className="text-muted">Added on: <strong>{props.time}</strong></small>
         </div>
       </div>
-    </div>
   );
 }
 
